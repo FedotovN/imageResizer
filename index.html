@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image resize and compress</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <div class="image-box">
+                <input type="file" name="" id="">
+                <img src="" alt="">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <p>Click here to browse for image!</p>
+            </div>
+            <div class="content">
+                <div class="row checkboxes">
+                    <div class="fix-ratio">
+                        <label for="ratio">Fix image ratio</label>
+                        <input type="checkbox" name="ratio" id="ratio">
+                    </div>
+                    <div class="compress-image">
+                        <label for="compress">Compress image</label>
+                        <input type="checkbox" name="compress" id="compress">
+                    </div>
+                </div>
+                <div class="row inputs">
+                    <div class="column height">
+                        <label for="height">Height</label>
+                        <input type="number" name="height" id="height">
+                    </div>
+                    <div class="column width">
+                        <label for="width">Width</label>
+                        <input type="number" name="width" id="width">
+                    </div>
+                </div>
+                <button class="download">Download new image</button>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --dark: #2a4c80;
+    --bright: #f8a79b;
+    --grey: #c2c2c2;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bright);
+    color: var(--dark);
+    font-family:'Inter', sans-serif;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    background-color: white;
+    border-radius: 8px;
+    width: 400px;
+    padding: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    width: 350px;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.wrapper .content{
+    height: 0;
+    opacity: 0;
+    user-select: none;
+    z-index: -1;
+    transition: .3s;
+}
+.wrapper.active .content{
+    height: 210px;
+    opacity: 1;
+    z-index: 0;
+}
+.wrapper .image-box{
+    width: 100%;
+    height: 200px;
+    border: 2px dashed var(--dark);
+    border-radius: 4px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color .3s;
+}
+.wrapper .image-box:hover{
+    background-color: var(--dark);
+}
+.wrapper .image-box:hover i, .wrapper .image-box:hover p{
+    color: white;
+}
+.image-box input{
+    display: none;
+}
+.wrapper.active .image-box img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.image-box i{
+    font-size: 50px;
+    color: var(--dark);
+}
+.image-box p{
+    color: var(--dark);
+}
+.wrapper.active .image-box i, .wrapper.active .image-box p{
+    display: none;
+}
+.wrapper.active .image-box{
+    border: none;
+}
+.row.inputs{
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.row.inputs label{
+    font-size: 18px;
+}
+.row.inputs input{
+    margin-top: 20px;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    outline: none;
+    border: 1px solid var(--grey);
+    border-radius: 4px;
+    font-size: 16px;
+}
+.row.inputs input:focus{
+    border-color: var(--dark);
+}
+.row.checkboxes{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    gap: 47px;
+}
+.row.checkboxes input[type="checkbox"]{
+    transform: scale(1.25);
+    margin-left: 10px;
+    accent-color: var(--bright);
+}
+.download{
+    margin-top: 20px;
+    width: 100%;
+    height: 55px;
+    border-radius: 4px;
+    background-color: var(--bright);
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    transition: letter-spacing .3s;
+}
+.download:hover{
+    letter-spacing: 1.1px;
+}
+
